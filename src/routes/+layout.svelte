@@ -1,5 +1,6 @@
 <script>
   import "../app.css";
+  const imgUrl = new URL('/static/favicon.png', import.meta.url).href
 </script>
 
 <nav class="bg-gray-800">
@@ -29,7 +30,9 @@
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
-          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+          <a href="/">
+            <img class="h-8 w-auto" src={imgUrl} alt="Your Company">
+          </a>
         </div>
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
@@ -40,7 +43,7 @@
         </div>
       </div>
       <div class="hidden absolute inset-y-0 right-0 sm:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        <a href="#" class="bg-green-600 text-white hover:bg-green-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">+Add New</a>
+        <a href="/add-new" class="bg-green-600 text-white hover:bg-green-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">+Add New</a>
         <!-- <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
           <span class="sr-only">View notifications</span>
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -58,7 +61,7 @@
       <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
       <a href="/all-post" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">All Posts</a>
       <a href="/preview" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Preview</a>
-      <a href="#" class="text-white bg-green-600 hover:bg-green-700 block rounded-md px-3 py-2 text-base font-medium">+Add New</a>
+      <a href="/add-new" class="text-white bg-green-600 hover:bg-green-700 block rounded-md px-3 py-2 text-base font-medium">+Add New</a>
 
     </div>
   </div>
